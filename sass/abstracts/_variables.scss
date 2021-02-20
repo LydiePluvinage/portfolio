@@ -1,0 +1,21 @@
+//COLOR
+$color-primary:#a593e0;
+$color-primary-dark:#796aab;
+$color-primary-light:#c8b8ff;
+
+$color-secondary:#e0e3da;
+$color-tertiary:#fffff3;
+$color-quaternary:#566270;
+
+//SHADOW
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3);
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
+
+//FONT
+$default-font-size:1.6rem;
+
+//RESPONSIVE BREAKPOINTS
+$breakpoint-largest: 75em; // 1200px / 16 (default font size)
+$breakpoint-medium: 56.25em; // 900px / 16
+$breakpoint-small: 37.5em; // 600px / 16
+$breakpoint-verysmall: 31.25em; // 500px / 16

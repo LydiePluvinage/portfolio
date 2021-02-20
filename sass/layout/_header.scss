@@ -1,0 +1,27 @@
+.header{
+    grid-column: full-start / full-end;
+    grid-row: 1 / 2;
+
+    background-color: red;
+    
+    color:$color-tertiary;
+
+    display:flex;
+    
+
+    &__photo{
+        padding:5rem;
+        width:33%;
+    }
+
+    &__img{
+        width:100%;
+        border-radius: 50%;
+    }
+
+    &__text{
+        
+        align-self:center;
+        width:67%;
+    }
+}

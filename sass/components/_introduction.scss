@@ -1,0 +1,9 @@
+.introduction{
+    grid-column: center-start / center-end;
+    grid-row: 2 / 3;
+
+    &__text{
+        font-size:3rem;
+        color:$color-secondary;
+    }
+}

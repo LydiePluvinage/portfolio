@@ -1,0 +1,12 @@
+.gallery{
+    grid-column: full-start / full-end;
+    grid-row: 4 / 5;
+
+    background-color: blue;
+
+    display:grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(7, 5vw);
+    grid-gap:1.5rem;
+    padding:1.5rem;
+}

@@ -1,0 +1,16 @@
+.btn{
+    padding:2rem; 
+    box-shadow: $shadow-light; 
+    border-radius: 20rem;
+    color:$color-tertiary;
+    background-color: $color-primary-dark;
+    transition:all .5s ease-in-out;
+    border:none;
+
+    &:hover{
+        color: $color-quaternary;
+        background-color:$color-primary-light;  
+        transform:scale(0.8);
+        box-shadow:$shadow-dark;
+    }
+}
