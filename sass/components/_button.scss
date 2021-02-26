@@ -1,16 +1,25 @@
-.btn{
-    padding:2rem; 
-    box-shadow: $shadow-light; 
-    border-radius: 20rem;
-    color:$color-tertiary;
-    background-color: $color-primary-dark;
-    transition:all .5s ease-in-out;
-    border:none;
+.btn {
+    font-size: 1.7rem;
+    font-family: 'Wire One', sans-serif;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: $color-tertiary;
 
-    &:hover{
-        color: $color-quaternary;
-        background-color:$color-primary-light;  
-        transform:scale(0.8);
-        box-shadow:$shadow-dark;
+    padding: 2rem 4rem;
+    box-shadow: $shadow-light;
+    border-radius: 20rem;
+    border: none;
+    background-color: $color-primary-dark;
+
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        color: $color-primary-dark;
+        font-weight: 900;
+        border: 2px solid $color-primary-dark;
+        background-color: $color-tertiary;
+        transform: translateY(50px);
+        box-shadow: $shadow-dark;
     }
 }
