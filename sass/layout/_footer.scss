@@ -1,60 +1,59 @@
-.footer{
+.footer {
     background-color: $color-primary-dark;
     grid-column: full-start / full-end;
-    grid-row: 6 / 7;
-    
-    height:40vh;
-    padding:5rem;
+    grid-row: -2 / -1;
 
-    position:relative;
+    height: 40vh;
+    padding: 5rem;
+
+    position: relative;
 
     @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
         clip-path: polygon(0 0, 50% 20vh, 100% 0, 100% 100%, 0 100%);
-        padding-top:30vh;
+        padding-top: 30vh;
         height: 45vh;
     }
 
-    font-size:1.8rem;
-    color:$color-tertiary;
+    font-size: 1.8rem;
+    color: $color-tertiary;
 
-    &__nav{
-        display:flex;
-        justify-content: center;        
+    &__nav {
+        display: flex;
+        justify-content: center;
     }
 
-    &__item{
+    &__item {
         list-style: none;
 
-        &:not(:last-of-type){
-            margin-right:3rem;
+        &:not(:last-of-type) {
+            margin-right: 3rem;
         }
     }
 
-    &__link{
-        text-decoration: none;  
-        padding:2rem; 
-        box-shadow: $shadow-dark; 
+    &__link {
+        text-decoration: none;
+        padding: 2rem;
+        box-shadow: $shadow-dark;
         border-radius: 50%;
 
         &:link,
         &:visited {
-            color:currentColor;
-        } 
-        
+            color: currentColor;
+        }
+
         &:hover,
         &:active {
             color: $color-quaternary;
-            background-color:$color-primary-light;            
+            background-color: $color-primary-light;
         }
 
         //HOVER ANIMATION
-        .fa{
-            transition:all .5s ease-in-out;
+        .fa {
+            transition: all 0.5s ease-in-out;
         }
 
-        &:hover .fa{
-            transform:rotate(360deg);
+        &:hover .fa {
+            transform: rotate(360deg);
         }
     }
 }
-
