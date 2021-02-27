@@ -1,23 +1,22 @@
 *,
 *::after,
-*::before{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    font-size:62.5%; //1 rem = 10px. 10px/16px(default) = 62.5%
+html {
+    font-size: 62.5%; //1 rem = 10px. 10px/16px(default) = 62.5%
 }
 
-body{
-    box-sizing:border-box;
-    padding:30px; 
-    font-family: 'Montserrat', sans-serif;
+body {
+    box-sizing: border-box;
+    font-family: Baskerville, Georgia, serif;
     background-color: $color-tertiary;
 }
 
-::selection{
+::selection {
     background-color: $color-primary-light;
-    color:$color-quaternary;
+    color: $color-quaternary;
 }
