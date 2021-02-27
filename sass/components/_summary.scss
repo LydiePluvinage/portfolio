@@ -1,4 +1,33 @@
 .summary {
-    grid-column: full-start / full-end;
+    grid-column: center-start / center-end;
     grid-row: 7 / 8;
+
+    justify-self: center;
+
+    &__content {
+        padding: 3rem;
+        font-size: 2rem;
+        line-height: 4rem;
+        font-weight: 400;
+        color: $color-quaternary;
+        font-style: italic;
+    }
+
+    &__icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        fill: $color-primary-dark;
+        margin-right: 2rem;
+    }
+
+    &__item {
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        align-items: center;
+
+        &:not(:last-of-type) {
+            margin-bottom: 3rem;
+        }
+    }
 }
