@@ -14,7 +14,6 @@
         height: 45vh;
     }
 
-    font-size: 1.8rem;
     color: $color-tertiary;
 
     &__nav {
@@ -24,6 +23,7 @@
 
     &__item {
         list-style: none;
+        font-size: 1.8rem;
 
         &:not(:last-of-type) {
             margin-right: 3rem;
@@ -55,5 +55,10 @@
         &:hover .fa {
             transform: rotate(360deg);
         }
+    }
+    &__copyright {
+        font-size: 1.3rem;
+        text-align: right;
+        padding: 2rem;
     }
 }

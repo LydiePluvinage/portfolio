@@ -3,22 +3,69 @@
     grid-row: 1 / 2;
 
     background-color: $color-primary-dark;
-    color: $color-tertiary;
 
     display: flex;
+    align-items: stretch;
 
     &__photo {
-        padding: 5rem;
         width: 33%;
+        background-color: $color-secondary;
     }
 
     &__img {
         width: 100%;
-        border-radius: 50%;
+        object-fit: cover;
+        height: 100%;
     }
 
     &__text {
-        align-self: center;
+        padding: 10rem;
         width: 67%;
+        //text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    &__title {
+        position: relative;
+        height: 7rem;
+        display: inline-block;
+
+        .block {
+            width: 0%;
+            height: inherit;
+            background: $color-primary-light;
+            position: absolute;
+            animation: Block 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+            display: flex;
+        }
+
+        h1 {
+            font-family: 'Poppins';
+            font-size: 5rem;
+            color: $color-secondary;
+            animation: FadeIn 2s forwards;
+            animation-delay: 1.6s;
+            opacity: 0;
+            display: flex;
+            align-items: baseline;
+            position: relative;
+
+            span {
+                width: 0px;
+                height: 0px;
+                border-radius: 50%;
+                background: $color-primary-light;
+                animation: popIn 0.8s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+                animation-delay: 2s;
+                margin-left: 5px;
+                margin-top: -10px;
+                position: absolute;
+                bottom: 13px;
+                right: -12px;
+            }
+        }
     }
 }

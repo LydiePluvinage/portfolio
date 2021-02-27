@@ -16,10 +16,8 @@
     transition: all 0.5s ease-in-out;
 
     &:hover {
-        color: $color-primary-dark;
-        font-weight: 900;
-        border: 2px solid $color-primary-dark;
-        background-color: $color-tertiary;
+        color: $color-quaternary;
+        background-color: $color-primary-light;
         box-shadow: $shadow-dark;
     }
 }
