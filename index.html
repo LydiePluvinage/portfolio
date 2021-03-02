@@ -6,6 +6,7 @@
         
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;800&family=Wire+One&display=swap" rel="stylesheet">        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <link rel="icon" type="image/png" href="img/favicon.ico" />
 
         <title>Lydie Pluvinage</title>
@@ -43,9 +44,9 @@
         <section class="introduction">
 
             <p class="introduction__text">
-                <strong>Développeuse passionnée</strong> depuis plus de 15 ans sur client lourd, j'ai décidé de me réorienter vers le <strong>Web</strong>. Conseillée par deux amis développeurs <strong>Front-end</strong> (respectivement expert Angular et React), j'ai pu mettre au point un programme de formation complet.
+                <span class="highlight"><strong>Développeuse passionnée</strong></span> depuis plus de 15 ans sur client lourd, j'ai décidé de me réorienter vers le <span class="highlight"><strong>Web</strong></span>. Conseillée par deux amis développeurs <span class="highlight"><strong>Front-end</strong></span> (respectivement expert Angular et React), j'ai pu mettre au point un programme de formation complet.
                 <br><br>
-                <strong>Autodidacte</strong>, je suis donc quotidiennement sur Udemy, Pluralsight et Openclassrooms pour apprendre et appliquer ces nouvelles connaissances.
+                <span class="highlight"><strong>Autodidacte</strong></span>, je suis donc quotidiennement sur Udemy, Pluralsight et Openclassrooms pour apprendre et appliquer ces nouvelles connaissances.
                 <br><br>
                 N'hésitez pas à me contacter !
             </p>
@@ -63,6 +64,79 @@
                 </h3>
             </div>
             <div class="skills__content">
+                <div class="skills__box">
+                    <div class="skills__bar" data-width="100%">
+                        <div class="skills__area" id="skillNET" style="background-color:#5A69A6;"> 
+                          <span class="skills__label">.Net</span>
+                        </div>
+                      </div>
+                      <div class="skills__bar" data-width="100%">
+                        <div class="skills__area" id="skillSQL" style="background-color:red;"> 
+                          <span class="skills__label">SQL</span>
+                        </div>
+                      </div>                    
+                    <div class="skills__bar" data-width="90%">
+                        <div class="skills__area" id="skillHTML" style="background-color:#ea8564;"> 
+                          <span class="skills__label">HTML</span>
+                        </div>
+                      </div>
+                      <div class="skills__bar" data-width="90%">
+                        <div class="skills__area" id="skillCSS" style="background-color:#55a69f;"> 
+                          <span class="skills__label">CSS</span>
+                        </div>
+                      </div>
+                      <div class="skills__bar" data-width="90%">
+                        <div class="skills__area" id="skillJson" style="background-color:#f8a51e;"> 
+                          <span class="skills__label">JSON</span>
+                        </div>
+                      </div>
+                      <div class="skills__bar" data-width="90%">
+                        <div class="skills__area" id="skillXML" style="background-color:#23b1db;"> 
+                          <span class="skills__label">XML</span>
+                        </div>
+                      </div>   
+                      <div class="skills__bar" data-width="85%">
+                        <div class="skills__area" id="skillSASS" style="background-color:#99856d;"> 
+                          <span class="skills__label">Sass</span>
+                        </div>
+                      </div>
+                      <div class="skills__bar" data-width="25%">
+                        <div class="skills__area" id="skillJS" style="background-color:#c44e45;"> 
+                          <span class="skills__label">Javascript</span>
+                        </div>
+                      </div>
+                      <div class="skills__bar" data-width="15%">
+                        <div class="skills__area" id="skillReact" style="background-color:#5aa669;"> 
+                          <span class="skills__label">React</span>
+                        </div>
+                      </div>
+                      <div class="skills__bar" data-width="15%">
+                        <div class="skills__area" id="skillAngular" style="background-color:#970cc1;"> 
+                          <span class="skills__label">Angular</span>
+                        </div>
+                      </div>
+                      <div class="skills__bar" data-width="10%">
+                        <div class="skills__area" id="skillVue" style="background-color:#8e930c;"> 
+                          <span class="skills__label">Vue</span>
+                        </div>
+                      </div>                                         
+                </div>
+                <div class="skills__practice">
+                    <span class="skills__title">
+                        Best Practices
+                    </span>
+                    <ul class="skills__list  u-margin-top-medium">
+                        <li class="skills__item">
+                            BEM
+                        </li>
+                        <li class="skills__item">
+                            7-1 Pattern
+                        </li>
+                        <li class="skills__item">
+                            Airbnb prettier config
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
         <!-- SKILLS END -->
@@ -222,5 +296,12 @@
             <div class="footer__copyright">&copy; Lydie Pluvinage</div>         
         </header>
         <!-- FOOTER END -->
+        <script>
+            $(".skills__bar").each(function(){
+            $(this).find(".skills__area").animate({
+                width: $(this).attr("data-width")
+            },2000)
+            });
+        </script>
     </body>
 </html>
