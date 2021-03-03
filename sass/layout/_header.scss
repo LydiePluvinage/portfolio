@@ -38,7 +38,7 @@
             height: inherit;
             background: $color-primary-light;
             position: absolute;
-            animation: Block 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+            animation: block 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
             display: flex;
         }
 
@@ -46,7 +46,7 @@
             font-family: 'Poppins';
             font-size: 5rem;
             color: $color-secondary;
-            animation: FadeIn 2s forwards;
+            animation: fadeIn 2s forwards;
             animation-delay: 1.6s;
             opacity: 0;
             display: flex;

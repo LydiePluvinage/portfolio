@@ -1,3 +1,5 @@
+$number-list-items: 4;
+
 .summary {
     grid-column: center-start / center-end;
     grid-row: 7 / 8;
@@ -20,14 +22,25 @@
         margin-right: 2rem;
     }
 
-    &__item {
+    li {
+        position: relative;
         text-decoration: none;
         list-style: none;
         display: flex;
         align-items: center;
 
+        animation: slideFadeIn 0.5s linear;
+        animation-fill-mode: both;
+
         &:not(:last-of-type) {
             margin-bottom: 3rem;
+        }
+    }
+
+    //sets delay for each list item (must be longer than previous one)
+    @for $i from 1 through $number-list-items {
+        li:nth-child(#{$i}) {
+            animation-delay: 0.4s * $i;
         }
     }
 }
