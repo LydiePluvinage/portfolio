@@ -5,11 +5,21 @@
 
     &__content {
         display: flex;
+        @media only screen and (max-width: $breakpoint-medium) {
+            flex-direction: column;
+        }
     }
 
     &__box {
         width: 66%;
         margin-right: 5rem;
+        @media only screen and (max-width: $breakpoint-largest) {
+            margin-right: 2rem;
+        }
+        @media only screen and (max-width: $breakpoint-medium) {
+            width: 100%;
+            margin-right: 0;
+        }
     }
 
     &__bar {
@@ -36,6 +46,10 @@
         text-shadow: none;
         color: #fff;
         font-size: 1.8rem;
+        @media only screen and (max-width: $breakpoint-largest) {
+            font-size: 1.4rem;
+            margin-left: 1rem;
+        }
     }
     &__practice {
         padding: 3rem;
@@ -45,6 +59,9 @@
         background: #ffc;
         box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
         transform: rotate(-6deg);
+        @media only screen and (max-width: $breakpoint-largest) {
+            margin: 2rem;
+        }
     }
 
     &__title {
