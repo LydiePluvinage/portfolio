@@ -13,6 +13,10 @@ $number-list-items: 4;
         font-weight: 400;
         color: $color-quaternary;
         font-style: italic;
+        @media only screen and (max-width: $breakpoint-medium) {
+            font-size: 1.5rem;
+            padding: 2rem;
+        }
     }
 
     &__icon {
