@@ -5,6 +5,7 @@
     letter-spacing: 3px;
     text-decoration: none;
     color: $color-tertiary;
+    box-sizing: border-box;
 
     padding: 2rem 4rem;
     box-shadow: $shadow-light;
@@ -19,7 +20,6 @@
         font-weight: 900;
         border: 2px solid $color-primary-dark;
         background-color: $color-tertiary;
-        transform: translateY(50px);
         box-shadow: $shadow-dark;
     }
 }
