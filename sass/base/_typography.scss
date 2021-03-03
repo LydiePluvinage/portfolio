@@ -1,15 +1,13 @@
-.heading-primary {
-    font-size: 3rem;
-    font-weight: 600;
-    color: $color-quaternary;
-    padding: 5rem;
-}
-
 .heading-secondary {
+    font-weight: 400;
+    color: $color-tertiary;
+    font-family: 'Lato';
     font-size: 2rem;
-    color: $color-primary-dark;
-    font-style: italic;
-    padding-left: 10rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: FadeIn 2s forwards;
+    animation-delay: 2.5s;
+    opacity: 0;
 }
 
 .heading-tertiary {
@@ -19,6 +17,7 @@
     letter-spacing: 3px;
     transition: all 0.4s;
     animation-delay: 0.3s;
+    text-shadow: 0 1rem 0.5rem rgba(0, 0, 0, 0.1);
 
     &::after {
         content: '';
