@@ -8,6 +8,10 @@
     animation: fadeIn 2s forwards;
     animation-delay: 2.5s;
     opacity: 0;
+
+    @media only screen and (max-width: $breakpoint-smallest) {
+        font-size: 1.3rem;
+    }
 }
 
 .heading-tertiary {
@@ -33,29 +37,8 @@
         animation: slide-in-right 0.5s forwards;
         animation-delay: 2s;
         opacity: 0;
+        @media only screen and (max-width: $breakpoint-medium) {
+            margin-top: 2rem;
+        }
     }
-}
-
-span.highlight {
-    //font-weight: bolder;
-    background: linear-gradient(
-            104deg,
-            rgba($color-primary, 0) 0.9%,
-            rgba($color-primary, 1.25) 2.4%,
-            rgba($color-primary, 0.5) 5.8%,
-            rgba($color-primary, 0.1) 93%,
-            rgba($color-primary, 0.7) 96%,
-            rgba($color-primary, 0) 98%
-        ),
-        linear-gradient(
-            183deg,
-            rgba($color-primary, 0) 0%,
-            rgba($color-primary, 0.3) 7.9%,
-            rgba($color-primary, 0) 15%
-        );
-    padding: 0.6em 13.7px;
-    margin: 0;
-    border-radius: 7.5px;
-    text-shadow: -12px 12px 9.8px rgba($color-primary, 0.7),
-        21px -18.1px 7.3px rgba(255, 255, 255, 1), -18.1px -27.3px 30px rgba(255, 255, 255, 1);
 }
