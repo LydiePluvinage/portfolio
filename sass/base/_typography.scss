@@ -2,13 +2,37 @@
     font-size: 3rem;
     font-weight: 600;
     color: $color-quaternary;
-    padding:5rem;
+    padding: 5rem;
 }
 
 .heading-secondary {
     font-size: 2rem;
     color: $color-primary-dark;
     font-style: italic;
-    padding-left:10rem;
+    padding-left: 10rem;
 }
 
+.heading-tertiary {
+    font-family: 'Wire One', sans-serif;
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    transition: all 0.4s;
+    animation-delay: 0.3s;
+
+    &::after {
+        content: '';
+        animation-delay: 0.5s;
+        background: #695b94;
+        height: 4px;
+        width: 7rem;
+        display: block;
+        margin-top: 3rem;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: slide-in-right 0.5s forwards;
+        animation-delay: 2s;
+        opacity: 0;
+    }
+}

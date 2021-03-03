@@ -2,12 +2,14 @@
     grid-column: full-start / full-end;
     grid-row: 4 / 5;
 
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 15vw);
-    grid-gap: 1.5rem;
-    padding: 1.5rem;
-
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(5, 15vw);
+        grid-gap: 1.5rem;
+        padding: 1.5rem;
+        position: relative;
+    }
     &__item {
         perspective: 1500px;
         position: relative;
