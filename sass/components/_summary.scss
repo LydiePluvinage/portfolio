@@ -17,6 +17,9 @@ $number-list-items: 4;
             font-size: 1.5rem;
             padding: 2rem;
         }
+        @media only screen and (max-width: $breakpoint-smallest) {
+            padding: 0.5rem;
+        }
     }
 
     &__icon {

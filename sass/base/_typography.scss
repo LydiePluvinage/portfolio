@@ -1,4 +1,4 @@
-.heading-secondary {
+h2 {
     font-weight: 400;
     color: $color-tertiary;
     font-family: 'Lato';
@@ -14,7 +14,7 @@
     }
 }
 
-.heading-tertiary {
+h3 {
     font-family: 'Wire One', sans-serif;
     font-size: 5rem;
     font-weight: 600;
@@ -25,15 +25,13 @@
 
     &::after {
         content: '';
-        animation-delay: 0.5s;
         background: #695b94;
         height: 4px;
         width: 7rem;
         display: block;
         margin-top: 3rem;
         position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: calc(50% - 7rem / 2);
         animation: slide-in-right 0.5s forwards;
         animation-delay: 2s;
         opacity: 0;

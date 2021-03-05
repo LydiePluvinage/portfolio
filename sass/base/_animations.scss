@@ -5,33 +5,18 @@
     }
     100% {
         opacity: 1;
-        transform: translateX(-35px);
+        transform: translateX(0);
     }
 }
 
 @keyframes slide-in-left {
     0% {
-        transform: translateX(-300px);
+        transform: translateX(300px);
         opacity: 0;
     }
     100% {
         opacity: 1;
         transform: translateX(0);
-    }
-}
-
-@keyframes block {
-    0% {
-        width: 0%;
-        left: 0;
-    }
-    50% {
-        width: 100%;
-        left: 0;
-    }
-    100% {
-        width: 0;
-        left: 100%;
     }
 }
 
@@ -44,49 +29,14 @@
     }
 }
 
-@keyframes popIn {
-    0% {
-        width: 0px;
-        height: 0px;
-        background: #e9d856;
-        border: 0px solid #ddd;
-        opacity: 0;
-    }
-    50% {
-        width: 10px;
-        height: 10px;
-        background: #e9d856;
-        opacity: 1;
-        bottom: 45px;
-    }
-    65% {
-        width: 7px;
-        height: 7px;
-        bottom: 0px;
-        width: 15px;
-    }
-    80% {
-        width: 10px;
-        height: 10px;
-        bottom: 20px;
-    }
-    100% {
-        width: 7px;
-        height: 7px;
-        background: #e9d856;
-        border: 0px solid #222;
-        bottom: 13px;
-    }
-}
-
 @keyframes slideFadeIn {
     0% {
         opacity: 0;
-        top: 100px;
+        transform: translateY(100px);
     }
     75% {
         opacity: 0.5;
-        top: 0px;
+        transform: translateY(0);
     }
     100% {
         opacity: 1;

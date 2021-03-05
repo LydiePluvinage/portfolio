@@ -32,7 +32,7 @@
 
     &__style blockquote:after {
         background: none repeat scroll 0 0 rgba($color-primary-dark, 0.8);
-        border-radius: 50% 50% 50% 50%;
+        border-radius: 50%;
         color: rgba(255, 255, 255, 0.5);
         content: '❞';
         font-family: 'icons';
@@ -49,12 +49,12 @@
     }
     &__style--2 blockquote:after {
         background: none repeat scroll 0 0 rgba($color-tertiary, 0.8);
-        color: rgba($color-primary-dark, 0.8) !important;
+        color: rgba($color-primary-dark, 0.8);
         text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     }
     &__style blockquote:before {
         border-left: 5px solid rgba($color-primary, 0.2);
-        border-radius: 50% 50% 50% 50%;
+        border-radius: 50%;
         content: '';
         height: 50rem;
         left: -5rem;
@@ -62,6 +62,9 @@
         top: 0;
         width: 50rem;
         z-index: -1;
+        @media only screen and (max-width: $breakpoint-smallest) {
+            width: 43rem;
+        }
     }
     &__style--2 blockquote:before {
         border-right: 5px solid rgba(255, 255, 255, 0.2);
@@ -94,7 +97,7 @@
         font-weight: bold;
         text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
         text-transform: uppercase;
-        padding-top: 3rem !important;
+        padding-top: 3rem;
         text-align: right;
     }
 }
