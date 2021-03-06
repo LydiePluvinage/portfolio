@@ -5,6 +5,7 @@
     letter-spacing: 3px;
     text-decoration: none;
     box-sizing: border-box;
+    color: $color-primary-dark;
 
     background: linear-gradient(
             104deg,
@@ -26,6 +27,20 @@
     border-radius: 7.5px;
     text-shadow: -12px 12px 9.8px rgba($color-primary, 0.7),
         21px -18.1px 7.3px rgba(255, 255, 255, 1), -18.1px -27.3px 30px rgba(255, 255, 255, 1);
+
+    transition: all 0.2s;
+
+    &:link,
+    &:visited,
+    &:active,
+    &:hover {
+        text-decoration: none;
+        color: $color-primary-dark;
+    }
+
+    &:hover {
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    }
 
     @media only screen and (max-width: $breakpoint-smallest) {
         font-size: 1.5rem;
