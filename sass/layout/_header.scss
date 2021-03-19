@@ -60,16 +60,12 @@
     }
 
     &__scroll {
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
+        border: 10px solid transparent;
         border-top: 10px solid $color-primary-light;
-
         position: absolute;
-        bottom: 3rem;
+        bottom: 2rem;
         left: calc(50% - 10px / 2);
-        animation: scrollDown 0.8s linear infinite alternate;
+        animation: scrollDown 0.8s ease-in-out infinite alternate;
         animation-delay: 3s;
         opacity: 0;
     }
