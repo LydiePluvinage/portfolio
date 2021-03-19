@@ -47,6 +47,10 @@
         top: 0;
         width: 130px;
     }
+    &__style.dark blockquote:after {
+        background: none repeat scroll 0 0 rgba($color-primary-light, 0.8);
+        color: $color-quaternary;
+    }
     &__style--2 blockquote:after {
         background: none repeat scroll 0 0 rgba($color-tertiary, 0.8);
         color: rgba($color-primary-dark, 0.8);
@@ -61,7 +65,6 @@
         position: absolute;
         top: 0;
         width: 50rem;
-        z-index: -1;
         @media only screen and (max-width: $breakpoint-smallest) {
             width: 43rem;
         }
@@ -85,6 +88,10 @@
         text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
         margin-bottom: 2rem;
     }
+    &__style.dark blockquote p {
+        box-shadow: 0 -6px 0 rgba($color-primary-light, 0.2);
+        color: rgba($color-primary-light, 0.8);
+    }
     &__style--2 blockquote p {
         box-shadow: 0 -6px 0 rgba($color-secondary, 0.2);
         color: rgba($color-tertiary, 0.8);
@@ -99,5 +106,8 @@
         text-transform: uppercase;
         padding-top: 3rem;
         text-align: right;
+        &.dark {
+            color: $color-primary-light;
+        }
     }
 }

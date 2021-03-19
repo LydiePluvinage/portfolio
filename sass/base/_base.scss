@@ -17,6 +17,12 @@ body {
     box-sizing: border-box;
     font-family: Baskerville, Georgia, serif;
     background-color: $color-tertiary;
+    color: $color-quaternary;
+}
+
+.dark {
+    background-color: $color-quaternary;
+    color: $color-tertiary;
 }
 
 ::selection {

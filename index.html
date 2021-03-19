@@ -8,10 +8,15 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="icon" type="image/png" href="img/favicon.ico" />
-
+        <script type='text/javascript' src='script/script.js' async defer></script>
         <title>Lydie Pluvinage</title>
     </head>
     <body class="container">
+        <!-- LIGHT/DARK SELECTOR -->
+        <div class="selector" id="selector">
+            <input type="checkbox" class="selector__checkbox" id="selectorMode" checked>
+        </div>
+        <!-- LIGHT/DARK SELECTOR END-->
         <!-- HEADER -->
         <header class="header">      
             <div class="header__photo">
@@ -86,37 +91,32 @@
                         </div>
                       </div>
                       <div class="skills__bar">
-                        <div class="skills__area" style="background-color:#f8a51e;" data-width="90%"> 
-                          <span class="skills__label">JSON</span>
-                        </div>
-                      </div>
-                      <div class="skills__bar">
-                        <div class="skills__area" style="background-color:#23b1db;" data-width="90%"> 
-                          <span class="skills__label">XML</span>
-                        </div>
-                      </div>   
-                      <div class="skills__bar">
                         <div class="skills__area" style="background-color:#99856d;" data-width="85%">  
                           <span class="skills__label">Sass</span>
                         </div>
                       </div>
                       <div class="skills__bar">
-                        <div class="skills__area" style="background-color:#c44e45;" data-width="25%"> 
+                        <div class="skills__area" style="background-color:#c44e45;" data-width="65%"> 
                           <span class="skills__label">Javascript</span>
                         </div>
                       </div>
                       <div class="skills__bar">
-                        <div class="skills__area" style="background-color:#5aa669;" data-width="15%"> 
+                        <div class="skills__area" style="background-color:#23b1db;" data-width="20%"> 
+                          <span class="skills__label">Typescript</span>
+                        </div>
+                      </div>                        
+                      <div class="skills__bar">
+                        <div class="skills__area" style="background-color:#5aa669;" data-width="20%"> 
                           <span class="skills__label">React</span>
                         </div>
                       </div>
                       <div class="skills__bar">
-                        <div class="skills__area" style="background-color:#970cc1;" data-width="15%"> 
+                        <div class="skills__area" style="background-color:#970cc1;" data-width="20%"> 
                           <span class="skills__label">Angular</span>
                         </div>
                       </div>
                       <div class="skills__bar">
-                        <div class="skills__area" style="background-color:#8e930c;" data-width="10%"> 
+                        <div class="skills__area" style="background-color:#8e930c;" data-width="15%"> 
                           <span class="skills__label">Vue</span>
                         </div>
                       </div>                                         
@@ -277,7 +277,7 @@
                         <svg class="summary__icon">
                             <use xlink:href="img/sprite.svg#icon-code"></use>
                         </svg>
-                        Continuer à apprendre les diverses technologies du Web
+                        Continuer à approfondir les diverses technologies du Web
                     </li>
 
                 </ul>
@@ -290,19 +290,9 @@
                 <li class="footer__item"><a href="mailto:lydiepluvinage@yahoo.fr" class="footer__link" target="_blank"><i class="fa fa-envelope"></i></a></li>
                 <li class="footer__item"><a href="https://www.linkedin.com/in/lydiepluvinage/" class="footer__link" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                 <li class="footer__item"><a href="http://github.com/LydiePluvinage" class="footer__link" target="_blank"><i class="fa fa-github"></i></a></li>
-                <li class="footer__item"><a href="http://codepen.io/lydie-pluvinage" class="footer__link" target="_blank"><i class="fa fa-codepen"></i></a></li>
-                <!--<li class="footer__item footer__up"><a href="#home" class="footer__link"><i class="fa fa-chevron-up"></i></a></li> -->
             </ul>   
             <div class="footer__copyright">&copy; Lydie Pluvinage</div>         
         </header>
         <!-- FOOTER END -->
-        <script>
-            var areas = document.getElementsByClassName('skills__area');
-
-            for(i=0;i<areas.length;i++){
-                var widthAnimation = areas[i].getAttribute('data-width');
-                areas[i].animate({width:widthAnimation}, {duration:2000, fill:'forwards'});
-            }
-        </script>
     </body>
 </html>

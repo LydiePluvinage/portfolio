@@ -11,7 +11,6 @@ $number-list-items: 4;
         font-size: 2rem;
         line-height: 4rem;
         font-weight: 400;
-        color: $color-quaternary;
         font-style: italic;
         @media only screen and (max-width: $breakpoint-medium) {
             font-size: 1.5rem;
@@ -27,6 +26,10 @@ $number-list-items: 4;
         height: 2.5rem;
         fill: $color-primary-dark;
         margin-right: 2rem;
+
+        &.dark {
+            fill: $color-primary-light;
+        }
     }
 
     li {
@@ -35,13 +38,16 @@ $number-list-items: 4;
         list-style: none;
         display: flex;
         align-items: center;
-
-        animation: slideFadeIn 0.5s linear;
+        opacity: 0;
         animation-fill-mode: both;
 
         &:not(:last-of-type) {
             margin-bottom: 3rem;
         }
+    }
+
+    .animate {
+        animation: slideFadeIn 0.5s linear forwards;
     }
 
     //sets delay for each list item (must be longer than previous one)
