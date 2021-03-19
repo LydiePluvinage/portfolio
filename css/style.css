@@ -661,6 +661,20 @@ h3 {
       @media only screen and (max-width: 43.75em) {
         .header__title h1 {
           font-size: 3.6rem; } }
+  .header__scroll {
+    content: '\ud1d3';
+    width: 0;
+    height: 0;
+    border-left: 10px solid #695b94;
+    border-right: 10px solid #695b94;
+    border-top: 10px solid #c8b8ff;
+    position: absolute;
+    bottom: 3rem;
+    left: calc(50% - 10px / 2);
+    background-color: #c8b8ff;
+    animation: scrollDown 1.5s infinite;
+    animation-delay: 3s;
+    opacity: 0; }
 
 @keyframes block {
   0% {
@@ -672,6 +686,17 @@ h3 {
   100% {
     transform-origin: 100% 0;
     transform: scaleX(0) translateX(100%); } }
+
+@keyframes scrollDown {
+  0% {
+    opacity: 0.4;
+    transform: translateY(0); }
+  50% {
+    opacity: 1;
+    transform: translateY(5px); }
+  50% {
+    opacity: 0.3;
+    transform: translateY(10px); } }
 
 .footer {
   background-color: #695b94;
