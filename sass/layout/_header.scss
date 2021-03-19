@@ -60,13 +60,12 @@
     }
 
     &__scroll {
-        content: '\ud1d3';
         width: 0;
         height: 0;
         border-left: 10px solid $color-primary-dark;
         border-right: 10px solid $color-primary-dark;
-
         border-top: 10px solid $color-primary-light;
+
         position: absolute;
         bottom: 3rem;
         left: calc(50% - 10px / 2);
