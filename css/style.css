@@ -670,7 +670,7 @@ h3 {
     position: absolute;
     bottom: 3rem;
     left: calc(50% - 10px / 2);
-    animation: scrollDown 1.5s infinite;
+    animation: scrollDown 0.8s linear infinite alternate;
     animation-delay: 3s;
     opacity: 0; }
 
@@ -689,12 +689,9 @@ h3 {
   0% {
     opacity: 0.3;
     transform: translateY(0); }
-  50% {
-    opacity: 0.8;
-    transform: translateY(10px); }
   100% {
-    opacity: 0.3;
-    transform: translateY(0px); } }
+    opacity: 0.8;
+    transform: translateY(10px); } }
 
 .footer {
   background-color: #695b94;
