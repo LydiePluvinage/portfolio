@@ -46,10 +46,10 @@
         text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
         top: 0;
         width: 130px;
-    }
-    &__style.dark blockquote:after {
-        background: none repeat scroll 0 0 rgba($color-primary-light, 0.8);
-        color: $color-quaternary;
+        @include darkMode {
+            background: none repeat scroll 0 0 rgba($color-primary-light, 0.8);
+            color: $color-quaternary;
+        }
     }
     &__style--2 blockquote:after {
         background: none repeat scroll 0 0 rgba($color-tertiary, 0.8);
@@ -87,10 +87,10 @@
         line-height: 4.6rem;
         text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
         margin-bottom: 2rem;
-    }
-    &__style.dark blockquote p {
-        box-shadow: 0 -6px 0 rgba($color-primary-light, 0.2);
-        color: rgba($color-primary-light, 0.8);
+        @include darkMode {
+            box-shadow: 0 -6px 0 rgba($color-primary-light, 0.2);
+            color: rgba($color-primary-light, 0.8);
+        }
     }
     &__style--2 blockquote p {
         box-shadow: 0 -6px 0 rgba($color-secondary, 0.2);
@@ -106,7 +106,7 @@
         text-transform: uppercase;
         padding-top: 3rem;
         text-align: right;
-        &.dark {
+        @include darkMode {
             color: $color-primary-light;
         }
     }

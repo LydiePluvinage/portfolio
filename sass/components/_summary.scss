@@ -26,8 +26,7 @@ $number-list-items: 4;
         height: 2.5rem;
         fill: $color-primary-dark;
         margin-right: 2rem;
-
-        &.dark {
+        @include darkMode {
             fill: $color-primary-light;
         }
     }

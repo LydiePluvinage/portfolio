@@ -44,7 +44,7 @@
         font-size: 1.5rem;
     }
 
-    &.dark {
+    @include darkMode {
         color: $color-secondary;
         background: linear-gradient(
                 104deg,

@@ -63,8 +63,8 @@ h3 {
     @media only screen and (max-width: 56.25em) {
       h3::after {
         margin-top: 2rem; } }
-  h3.dark::after {
-    background: #c8b8ff; }
+    .dark h3::after {
+      background: #c8b8ff; }
 
 .u-center-text {
   text-align: center; }
@@ -145,7 +145,7 @@ h3 {
   @media only screen and (max-width: 37.5em) {
     .btn {
       font-size: 1.5rem; } }
-  .btn.dark {
+  .dark .btn {
     color: #e0e3da;
     background: linear-gradient(104deg, rgba(200, 184, 255, 0) 3.9%, #c8b8ff 5.4%, rgba(200, 184, 255, 0.5) 8.8%, rgba(200, 184, 255, 0.4) 97%, rgba(200, 184, 255, 0.7) 98%, rgba(200, 184, 255, 0) 98%), linear-gradient(183deg, rgba(200, 184, 255, 0) 4%, rgba(200, 184, 255, 0.3) 10.9%, rgba(200, 184, 255, 0) 19%); }
 
@@ -390,7 +390,7 @@ h3 {
     height: 2.5rem;
     fill: #695b94;
     margin-right: 2rem; }
-    .summary__icon.dark {
+    .dark .summary__icon {
       fill: #c8b8ff; }
   .summary li {
     position: relative;
@@ -450,9 +450,9 @@ h3 {
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.1);
     top: 0;
     width: 130px; }
-  .quote__style.dark blockquote:after {
-    background: none repeat scroll 0 0 rgba(200, 184, 255, 0.8);
-    color: #566270; }
+    .dark .quote__style blockquote:after {
+      background: none repeat scroll 0 0 rgba(200, 184, 255, 0.8);
+      color: #566270; }
   .quote__style--2 blockquote:after {
     background: none repeat scroll 0 0 rgba(255, 255, 243, 0.8);
     color: rgba(105, 91, 148, 0.8);
@@ -485,9 +485,9 @@ h3 {
     line-height: 4.6rem;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
     margin-bottom: 2rem; }
-  .quote__style.dark blockquote p {
-    box-shadow: 0 -6px 0 rgba(200, 184, 255, 0.2);
-    color: rgba(200, 184, 255, 0.8); }
+    .dark .quote__style blockquote p {
+      box-shadow: 0 -6px 0 rgba(200, 184, 255, 0.2);
+      color: rgba(200, 184, 255, 0.8); }
   .quote__style--2 blockquote p {
     box-shadow: 0 -6px 0 rgba(224, 227, 218, 0.2);
     color: rgba(255, 255, 243, 0.8);
@@ -500,7 +500,7 @@ h3 {
     text-transform: uppercase;
     padding-top: 3rem;
     text-align: right; }
-    .quote__author.dark {
+    .dark .quote__author {
       color: #c8b8ff; }
 
 .selector {
@@ -713,9 +713,13 @@ h3 {
       margin-right: 3rem; }
   .footer__link {
     text-decoration: none;
-    padding: 2rem;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
-    border-radius: 50%; }
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
     .footer__link:link, .footer__link:visited {
       color: currentColor; }
     .footer__link:hover, .footer__link:active {

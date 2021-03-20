@@ -38,8 +38,8 @@ h3 {
         @media only screen and (max-width: $breakpoint-medium) {
             margin-top: 2rem;
         }
-    }
-    &.dark::after {
-        background: $color-primary-light;
+        @include darkMode {
+            background: $color-primary-light;
+        }
     }
 }
