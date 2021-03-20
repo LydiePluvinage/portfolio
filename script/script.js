@@ -1,15 +1,18 @@
 // APPLY ANIMATIONS ON SCROLL
-let headerVisible;
-document.addEventListener('scroll', () => {
-    // Selector visibility
-    if (window.pageYOffset > window.innerHeight && headerVisible) {
-        document.getElementById('selector').style.display = 'flex';
-        headerVisible = false;
-    } else if (window.pageYOffset < window.innerHeight && !headerVisible) {
-        document.getElementById('selector').style.display = 'none';
-        headerVisible = true;
+let selectorVisible = false;
+function updateSelector() {
+    const scrollPastHeader = window.pageYOffset > window.innerHeight;
+    if (scrollPastHeader && !selectorVisible) {
+        document.getElementById('selector').style.opacity = 1;
+        selectorVisible = true;
+    } else if (!scrollPastHeader && selectorVisible) {
+        document.getElementById('selector').style.opacity = 0;
+        selectorVisible = false;
     }
-});
+}
+// UPDATES ON LOAD
+updateSelector();
+document.addEventListener('scroll', updateSelector);
 
 // SWITCH DARK/LIGHT MODE
 function switchColors() {

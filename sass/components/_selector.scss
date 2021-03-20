@@ -6,10 +6,12 @@
     right: 5%;
     border-radius: 0 0 1rem 1rem;
     background-color: $color-primary;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10;
+    opacity: 0;
+    transition: all 0.5s linear;
 
     &__checkbox {
         position: relative;
