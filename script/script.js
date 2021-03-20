@@ -1,34 +1,10 @@
 // APPLY ANIMATIONS ON SCROLL
 document.addEventListener('scroll', () => {
-    const screenHeight = window.innerHeight;
-    const top = window.pageYOffset + screenHeight;
-
     // Selector visibility
-    if (window.pageYOffset > screenHeight) {
+    if (window.pageYOffset > window.innerHeight) {
         document.getElementById('selector').style.display = 'flex';
     } else {
         document.getElementById('selector').style.display = 'none';
-    }
-    // Skills animation
-    const skillList = document.querySelector('.skills__content');
-    const isSkillVisible = top > skillList.offsetTop;
-    if (isSkillVisible) {
-        const areas = skillList.getElementsByClassName('skills__area');
-        for (let i = 0; i < areas.length; i += 1) {
-            const widthAnimation = areas[i].getAttribute('data-width');
-            areas[i].animate({ width: widthAnimation }, { duration: 2000, fill: 'forwards' });
-        }
-    }
-    // Summary animation
-    const summaryList = document.getElementById('summaryList');
-    const isSummaryVisible = top > summaryList.offsetTop;
-
-    if (isSummaryVisible) {
-        if (!summaryList.querySelector('.summary_item.animate')) {
-            summaryList
-                .querySelectorAll('.summary__item')
-                .forEach((item) => item.classList.add('animate'));
-        }
     }
 });
 
@@ -40,3 +16,40 @@ function switchColors() {
 
 // ACTIVATE SWITCH WHEN USER CHANGES MODE
 document.getElementById('selectorMode').addEventListener('change', switchColors);
+
+// DECLARE OBSERVER FOR ANIMATIONS
+const options = {
+    root: null,
+    threshold: 0.1,
+    rootMargin: '0px',
+};
+
+const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        if (entry.target.id === 'summaryList') {
+            if (!entry.target.querySelector('.summary_item.animate')) {
+                entry.target
+                    .querySelectorAll('.summary__item')
+                    .forEach((item) => item.classList.add('animate'));
+            }
+            return;
+        }
+
+        if (entry.target.className === 'skills__content') {
+            const areas = entry.target.getElementsByClassName('skills__area');
+            for (let i = 0; i < areas.length; i += 1) {
+                const widthAnimation = areas[i].getAttribute('data-width');
+                areas[i].animate({ width: widthAnimation }, { duration: 1000, fill: 'forwards' });
+            }
+        }
+    });
+}, options);
+
+// Start observing an element
+const skillList = document.querySelector('.skills__content');
+io.observe(skillList);
+
+const summaryList = document.getElementById('summaryList');
+io.observe(summaryList);

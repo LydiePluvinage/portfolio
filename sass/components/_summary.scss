@@ -50,9 +50,9 @@ $number-list-items: 4;
     }
 
     //sets delay for each list item (must be longer than previous one)
-    @for $i from 1 through $number-list-items {
+    @for $i from 2 through $number-list-items {
         li:nth-child(#{$i}) {
-            animation-delay: 0.4s * $i;
+            animation-delay: Calc((0.4s * $i) - 0.4s);
         }
     }
 }
