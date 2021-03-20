@@ -1,10 +1,13 @@
 // APPLY ANIMATIONS ON SCROLL
+let headerVisible;
 document.addEventListener('scroll', () => {
     // Selector visibility
-    if (window.pageYOffset > window.innerHeight) {
+    if (window.pageYOffset > window.innerHeight && headerVisible !== false) {
         document.getElementById('selector').style.display = 'flex';
-    } else {
+        headerVisible = false;
+    } else if (window.pageYOffset < window.innerHeight && headerVisible !== true) {
         document.getElementById('selector').style.display = 'none';
+        headerVisible = true;
     }
 });
 
@@ -47,7 +50,7 @@ const io = new IntersectionObserver((entries) => {
     });
 }, options);
 
-// Start observing an element
+// START OBSERVING ELEMENTS
 const skillList = document.querySelector('.skills__content');
 io.observe(skillList);
 
