@@ -2,10 +2,10 @@
 let headerVisible;
 document.addEventListener('scroll', () => {
     // Selector visibility
-    if (window.pageYOffset > window.innerHeight && headerVisible !== false) {
+    if (window.pageYOffset > window.innerHeight && headerVisible) {
         document.getElementById('selector').style.display = 'flex';
         headerVisible = false;
-    } else if (window.pageYOffset < window.innerHeight && headerVisible !== true) {
+    } else if (window.pageYOffset < window.innerHeight && !headerVisible) {
         document.getElementById('selector').style.display = 'none';
         headerVisible = true;
     }
